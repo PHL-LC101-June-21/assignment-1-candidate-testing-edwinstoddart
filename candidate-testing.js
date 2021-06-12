@@ -8,8 +8,8 @@ let candidateName = '';
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
 let candidateAnswer = '';
-let questions;
-let correctAnswers;
+let questions = 1;
+let correctAnswers = 0;
 let candidateAnswers;
 
 
@@ -28,12 +28,13 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   if (candidateAnswer === correctAnswer) {
-    console.log("Your answer, my dear candidate " + candidateName + "... was correct!")
+    console.log("Your answer, Candidate " + candidateName + "... was correct!")
+    correctAnswers += 1;
   } else {
-    console.log("Your answer, my dear candidate " + candidateName + "... was incorrect. You have failed, possibly by technicality.")
+    console.log("Your answer, Candidate" + candidateName + "... was incorrect. You have failed, possibly by technicality.")
   }
 
-  let grade;
+  let grade = (questions / correctAnswers);
   
 
   return grade;
