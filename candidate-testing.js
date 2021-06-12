@@ -28,10 +28,10 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   if (candidateAnswer === correctAnswer) {
-    console.log("Your answer, Candidate " + candidateName + "... was correct!")
+    console.log("Correct")
     correctAnswers += 1;
   } else {
-    console.log("Your answer, Candidate" + candidateName + "... was incorrect. You have failed, possibly by technicality.")
+    console.log("Incorrect")
   }
 
   let grade = (questions / correctAnswers);
