@@ -27,9 +27,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-  if (candidateAnswer === "Paul Blart") {
-    console.log("He's a mall cop, and not a woman, " + candidateName + "... That's not the correct answer.");
-  } else if (candidateAnswer === correctAnswer) {
+  if (candidateAnswer === correctAnswer) {
     console.log("Your answer, my dear candidate " + candidateName + "... was correct!")
   } else {
     console.log("Your answer, my dear candidate " + candidateName + "... was incorrect. You have failed, possibly by technicality.")
