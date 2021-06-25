@@ -22,7 +22,8 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   console.log('Please answer the following questions:');
   for (let i = 0; i < questions.length; i++) {
-    candidateAnswers[i] = input.question((i+1) + ') ' + questions[i] + '\n');
+    candidateAnswers[i] = input.question(`${i+1}) ${questions[i]}\nYour Answer: `);
+    console.log(`Correct Answer: ${correctAnswers[i]}`)
   }
 
 }
@@ -36,14 +37,6 @@ function gradeQuiz(candidateAnswers) {
       score++;
     }
   }
-  /*
-  console.log(`Thank you for your time. The following will be your answers followed by the correct answers:
-  1) ${candidateAnswers[0]}, ${correctAnswers[0]}
-  2) ${candidateAnswers[1]}, ${correctAnswers[1]}
-  3) ${candidateAnswers[2]}, ${correctAnswers[2]}
-  4) ${candidateAnswers[3]}, ${correctAnswers[3]}
-  5) ${candidateAnswers[4]}, ${correctAnswers[4]}`);
-  */
   let grade = (score / correctAnswers.length) * 100;
   
 
@@ -57,6 +50,11 @@ function runProgram() {
   askQuestion();
   grade = gradeQuiz(this.candidateAnswers);
   console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
+  if (grade >= 80) {
+    console.log("Congratulations! You've passed!!");
+  } else {
+    console.log("I'm sorry, you've failed...");
+  }
 }
 
 // Don't write any code below this line //
