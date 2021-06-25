@@ -33,7 +33,7 @@ Correct Answer: ${correctAnswers[i]}\n`);
   if (grade >= 80) {
     console.log('Congratulations! You passed!!')
   } else {
-    console.log("I'm sorry, but you've failed...")
+    console.log("I'm sorry, but you've failed.")
   }
   return grade;
 }
