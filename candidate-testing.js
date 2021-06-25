@@ -25,13 +25,22 @@ function askQuestion() {
 
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
+  console.log(`\nThank you for taking the test, ${candidateName}!`)
   let score = 0;
   for (i = 0; i < candidateAnswers.length; i++) {
+    console.log(questions[i]);
+    console.log(`Your Answer: ${candidateAnswers[i]}
+Correct Answer: ${correctAnswers[i]}\n`);
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) { score++;
     }
   }
   let grade = (score / correctAnswers.length) * 100;
-  console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
+  console.log(`Your overall score is: ${grade}`);
+  if (grade >= 80) {
+    console.log('Congratulations! You passed!!')
+  } else {
+    console.log("I'm sorry, but you've failed...")
+  }
   return grade;
 }
 
@@ -40,7 +49,7 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   console.log(`Candidate Q2364 has been set to ${candidateName}...\nHello ${candidateName}!`)
   askQuestion();
-  grade = gradeQuiz(this.candidateAnswers);
+  gradeQuiz(this.candidateAnswers);
 }
 
 // Don't write any code below this line //
