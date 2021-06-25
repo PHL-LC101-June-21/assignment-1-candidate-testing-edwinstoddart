@@ -36,14 +36,7 @@ function gradeQuiz(candidateAnswers) {
       score++;
     }
   }
-  /*
-  console.log(`Thank you for your time. The following will be your answers followed by the correct answers:
-  1) ${candidateAnswers[0]}, ${correctAnswers[0]}
-  2) ${candidateAnswers[1]}, ${correctAnswers[1]}
-  3) ${candidateAnswers[2]}, ${correctAnswers[2]}
-  4) ${candidateAnswers[3]}, ${correctAnswers[3]}
-  5) ${candidateAnswers[4]}, ${correctAnswers[4]}`);
-  */
+  candidateAnswer = candidateAnswers[0];
   let grade = (score / correctAnswers.length) * 100;
   
 
