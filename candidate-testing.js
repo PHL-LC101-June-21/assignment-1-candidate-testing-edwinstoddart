@@ -30,14 +30,21 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly //
+  let score = 0;
+  for (i = 0; i < candidateAnswers.length; i++) {
+    if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
+      score++;
+    }
+  }
+  /*
   console.log(`Thank you for your time. The following will be your answers followed by the correct answers:
   1) ${candidateAnswers[0]}, ${correctAnswers[0]}
   2) ${candidateAnswers[1]}, ${correctAnswers[1]}
   3) ${candidateAnswers[2]}, ${correctAnswers[2]}
   4) ${candidateAnswers[3]}, ${correctAnswers[3]}
   5) ${candidateAnswers[4]}, ${correctAnswers[4]}`);
-
-  let grade;
+  */
+  let grade = (score / correctAnswers.length) * 100;
   
 
   return grade;
@@ -48,7 +55,8 @@ function runProgram() {
   // TODO 1.1c: Ask for candidate's name //
   console.log(`Candidate Q2364 has been set to ${candidateName}...\nHello ${candidateName}!`)
   askQuestion();
-  gradeQuiz(this.candidateAnswers);
+  grade = gradeQuiz(this.candidateAnswers);
+  console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
 }
 
 // Don't write any code below this line //
