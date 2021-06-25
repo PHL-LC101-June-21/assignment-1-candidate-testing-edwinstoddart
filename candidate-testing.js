@@ -36,9 +36,8 @@ function gradeQuiz(candidateAnswers) {
       score++;
     }
   }
-  candidateAnswer = candidateAnswers[0];
   let grade = (score / correctAnswers.length) * 100;
-  
+  console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
 
   return grade;
 }
@@ -49,7 +48,6 @@ function runProgram() {
   console.log(`Candidate Q2364 has been set to ${candidateName}...\nHello ${candidateName}!`)
   askQuestion();
   grade = gradeQuiz(this.candidateAnswers);
-  console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
 }
 
 // Don't write any code below this line //
