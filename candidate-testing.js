@@ -12,7 +12,6 @@ let questions = ['Who was the first American woman in space? ', 'True or false: 
 let correctAnswers = ['Sally Ride', 'true', '40', 'Trajectory', '3'];
 let candidateAnswers = ['', '', '', '', ''];
 
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
   candidateName = input.question('Hello Candidate Q2364, would you please provide your name below:\n')
@@ -24,7 +23,6 @@ function askQuestion() {
   for (let i = 0; i < questions.length; i++) {
     candidateAnswers[i] = input.question((i+1) + ') ' + questions[i] + '\n');
   }
-
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -38,7 +36,6 @@ function gradeQuiz(candidateAnswers) {
   }
   let grade = (score / correctAnswers.length) * 100;
   console.log(`Thank you for taking the test, ${candidateName}! Your score is: ${grade}`)
-
   return grade;
 }
 
