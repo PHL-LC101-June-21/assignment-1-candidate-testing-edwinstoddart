@@ -22,7 +22,7 @@ function gradeQuiz(candidateAnswers) {
   console.log(`\nThank you for taking the test, ${candidateName}!`)
   let score = 0;
   for (i = 0; i < candidateAnswers.length; i++) {
-    console.log(questions[i]);
+    console.log(`${i+1}) ${questions[i]}`);
     console.log(`Your Answer: ${candidateAnswers[i]}
 Correct Answer: ${correctAnswers[i]}\n`);
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) { score++;
